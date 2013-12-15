@@ -1,14 +1,13 @@
+// MvxTouchControl.cs
+// (c) Copyright Christian Ruiz @_christian_ruiz
+// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
+// 
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Cirrious.CrossCore;
-using Cirrious.CrossCore.Touch.Views;
-using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.ViewModels;
 using MonoTouch.Foundation;
-using MonoTouch.UIKit;
 
 namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Touch
 {

@@ -1,4 +1,9 @@
-﻿using System.Collections.Generic;
+// FolderViewModel.cs
+// (c) Copyright Christian Ruiz @_christian_ruiz
+// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
+// 
+
+using System.Collections.Generic;
 using Cirrious.MvvmCross.ViewModels;
 using MupApps.ControlsNavigation.Sample.Core.Model;
 using MupApps.ControlsNavigation.Sample.Core.Services;

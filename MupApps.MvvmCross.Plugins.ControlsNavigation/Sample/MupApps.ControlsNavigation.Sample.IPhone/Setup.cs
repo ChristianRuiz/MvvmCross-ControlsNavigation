@@ -1,3 +1,8 @@
+// Setup.cs
+// (c) Copyright Christian Ruiz @_christian_ruiz
+// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
+// 
+
 using MonoTouch.UIKit;
 using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.ViewModels;

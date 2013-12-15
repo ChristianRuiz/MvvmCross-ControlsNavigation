@@ -1,4 +1,9 @@
-﻿using MonoTouch.Foundation;
+// AppDelegate.cs
+// (c) Copyright Christian Ruiz @_christian_ruiz
+// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
+// 
+
+using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Touch.Platform;

@@ -1,8 +1,9 @@
-using System;
+// FoldersView.cs
+// (c) Copyright Christian Ruiz @_christian_ruiz
+// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
+// 
+
 using System.Linq;
-using System.Drawing;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using MupApps.ControlsNavigation.Sample.Core.ViewModels;

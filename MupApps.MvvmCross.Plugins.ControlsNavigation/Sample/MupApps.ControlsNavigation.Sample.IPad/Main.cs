@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+// Main.cs
+// (c) Copyright Christian Ruiz @_christian_ruiz
+// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
+// 
 
-using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
 namespace MupApps.ControlsNavigation.Sample.IPad

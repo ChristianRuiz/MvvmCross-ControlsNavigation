@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+// IMailBoxService.cs
+// (c) Copyright Christian Ruiz @_christian_ruiz
+// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
+// 
+
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MupApps.ControlsNavigation.Sample.Core.Model;
 

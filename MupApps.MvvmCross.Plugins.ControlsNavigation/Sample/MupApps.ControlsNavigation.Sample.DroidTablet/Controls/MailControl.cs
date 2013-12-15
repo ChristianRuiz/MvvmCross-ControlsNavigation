@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+// MailControl.cs
+// (c) Copyright Christian Ruiz @_christian_ruiz
+// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
+// 
+
 using Android.Content;
-using Android.Runtime;
 using Android.Util;
 using MupApps.MvvmCross.Plugins.ControlsNavigation.Droid;
 

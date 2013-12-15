@@ -1,4 +1,9 @@
-﻿using System;
+// IMvxControlFinder.cs
+// (c) Copyright Christian Ruiz @_christian_ruiz
+// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
+// 
+
+using System;
 using Cirrious.MvvmCross.ViewModels;
 
 namespace MupApps.MvvmCross.Plugins.ControlsNavigation

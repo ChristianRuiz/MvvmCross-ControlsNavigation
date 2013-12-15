@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+// Plugin.cs
+// (c) Copyright Christian Ruiz @_christian_ruiz
+// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
+// 
+
 using Cirrious.CrossCore;
-using Cirrious.CrossCore.Core;
 using Cirrious.CrossCore.Plugins;
 
 namespace MupApps.MvvmCross.Plugins.ControlsNavigation

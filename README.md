@@ -1,9 +1,8 @@
 ##MvvmCross - Controls Navigation Plugin 
-================================
 
-MvvmCross plugin for allowing multiple ViewModels in the same View. 
+MvvmCross plugin that allows placing multiple ViewModels in the same View. 
 ##Features
-1. Allows iPad, Windows Store Apps and Desktop applications to have Controls instead of Views for each ViewModel, that can be on one same page
+1. Allows iPad, Windows Store and Android Tablet Apps to have Controls instead of Views for each ViewModel.
 
 ##Sample
 
@@ -63,8 +62,11 @@ MvvmCross plugin for allowing multiple ViewModels in the same View.
 	```
 
 	Touch:
+	
 	a. Add a UIView to your nib View file from XCode and position it, or add it programmatically to your MvxViewController
+	
 	b. Ensure that your UIViewController for your control inherits from MxvTouchControl
+	
 	c. Add your control to your View
 
 	```
