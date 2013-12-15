@@ -84,6 +84,18 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <Compile Include="Views\FoldersView.cs" />
+    <Compile Include="Views\FoldersView.designer.cs">
+      <DependentUpon>FoldersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CellTemplates\FolderCellTemplate.cs" />
+    <Compile Include="CellTemplates\FolderCellTemplate.designer.cs">
+      <DependentUpon>FolderCellTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FolderControl.cs" />
+    <Compile Include="Controls\FolderControl.designer.cs">
+      <DependentUpon>FolderControl.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MupApps.MvvmCross.Plugins.ControlsNavigation.Touch\MupApps.MvvmCross.Plugins.ControlsNavigation.Touch.csproj">
@@ -128,7 +140,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
+    <Folder Include="CellTemplates\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\FoldersView.xib" />
+    <InterfaceDefinition Include="CellTemplates\FolderCellTemplate.xib" />
+    <InterfaceDefinition Include="Controls\FolderControl.xib" />
+    <InterfaceDefinition Include="Resources\Controls\MailControl.xib" />
+  </ItemGroup>
 </Project>
