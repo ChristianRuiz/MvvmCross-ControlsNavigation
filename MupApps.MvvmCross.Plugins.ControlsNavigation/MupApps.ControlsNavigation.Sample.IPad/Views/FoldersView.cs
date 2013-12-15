@@ -27,7 +27,7 @@ namespace MupApps.ControlsNavigation.Sample.IPad
 		{
 			base.ViewDidLoad ();
 
-			FolderView.AddSubview (new FolderControl ());
+			FolderView.AddSubview (new FolderControl ().View);
 			
 			var source = new MvxSimpleTableViewSource(FoldersTable, FolderCellTemplate.Key, FolderCellTemplate.Key);
 			FoldersTable.Source = source;
