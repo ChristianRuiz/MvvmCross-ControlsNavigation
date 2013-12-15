@@ -3,10 +3,23 @@
 
 MvvmCross plugin for allowing multiple ViewModels in the same View. 
 ##Features
-1. Allows iPad and Windows Store Apps to have UserControls instead of Views, that can be on one same page
+1. Allows iPad, Windows Store Apps and Desktop applications to have UserControls instead of Views for each ViewModel, that can be on one same page
 
-##Usage
+##Sample
+
+![Windows Phone Default MVVMCross Navigation](http://i.imgur.com/iSniJEjh.png)
+
+![Windows Store Controls Navigation](http://i.imgur.com/yeBFtXs.png)
 
 ##Adding to your project
-1. Follow stuarts directions (step 3) - http://slodge.blogspot.com/2012/10/build-new-plugin-for-mvvmcrosss.html
-2. Grab the TabletNavigationPluginBootstrap file from appropriate Droid/Touch folder. Drop into your project in the Bootstrap folder, change the namespace.
+1. Override the CreateViewPresenter method on your Setup.cs file for each platform.
+	
+	protected override IMvxStoreViewPresenter CreateViewPresenter(Frame rootFrame)
+    {
+        var viewPresenter = base.CreateViewPresenter(rootFrame);
+        return new MvxStoreControlPresenter(viewPresenter);
+    }
+
+2. Create a /Controls folder
+3. Inherit your controls from MvxStoreControl with the same name of the ViewModel but ending in Control (Ex: SecondViewModel -> SecondControl)
+4. Add the user control to one of your Views that is already binded with a ViewModel (Ex: FirstView)

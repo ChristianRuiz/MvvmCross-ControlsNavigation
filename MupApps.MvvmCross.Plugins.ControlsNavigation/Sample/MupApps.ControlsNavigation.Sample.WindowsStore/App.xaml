@@ -1,0 +1,20 @@
+﻿<Application
+    x:Class="MupApps.ControlsNavigation.Sample.WindowsStore.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MupApps.ControlsNavigation.Sample.WindowsStore">
+	<Application.Resources>
+		<SolidColorBrush x:Key="AppBackgroundBrush" Color="White"/>
+		<SolidColorBrush x:Key="AppForegroundBrush" Color="#FF016FC1"/>
+        <SolidColorBrush x:Key="TextBlockForegroundBrush" Color="Black"/>
+		<SolidColorBrush x:Key="ListViewItemSelectedForegroundThemeBrush" Color="Black"/>
+		<SolidColorBrush x:Key="ListViewItemSelectedBackgroundThemeBrush" Color="#FF4e9ad4" />
+		<SolidColorBrush x:Key="ListViewItemSelectedPointerOverBackgroundThemeBrush" Color="#FF4e9ad4" />
+		<SolidColorBrush x:Key="ListViewItemSelectedPointerOverBorderThemeBrush" Color="#FF4e9ad4" />
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource TextBlockForegroundBrush}"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+    </Application.Resources>
+
+</Application>

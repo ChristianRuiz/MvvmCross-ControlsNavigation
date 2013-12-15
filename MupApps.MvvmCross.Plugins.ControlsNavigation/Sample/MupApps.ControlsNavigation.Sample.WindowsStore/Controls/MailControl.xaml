@@ -1,0 +1,44 @@
+﻿<controls:MvxStoreControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MupApps.ControlsNavigation.Sample.WindowsStore.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:MupApps.MvvmCross.Plugins.ControlsNavigation.WindowsStore"
+    xmlns:SampleData="using:Blend.SampleData.MailSampleDataSource"
+    x:Class="MupApps.ControlsNavigation.Sample.WindowsStore.Controls.MailControl"
+    mc:Ignorable="d"
+    d:DesignHeight="500"
+    d:DesignWidth="400">
+    
+	<controls:MvxStoreControl.Resources>
+		<SampleData:MailSampleDataSource x:Key="MailSampleDataSource" d:IsDataSource="True"/>
+	</controls:MvxStoreControl.Resources>
+    
+	<Grid d:DataContext="{Binding Source={StaticResource MailSampleDataSource}}" Background="{StaticResource AppBackgroundBrush}" Margin="10,20">
+        <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Mail.From}" Style="{StaticResource SubtitleTextBlockStyle}" Foreground="{StaticResource AppForegroundBrush}" />
+                        <TextBlock Text="{Binding Mail.To}" Foreground="#CC000000" Margin="0,5,0,0" />
+                        <TextBlock Text="{Binding Mail.Subject}" FontWeight="Bold" Padding="0,5,0,0" />
+                    </StackPanel>
+                    <TextBlock Grid.Column="1" Text="{Binding Mail.Date}" Foreground="#CC000000" />
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Mail.Body}" Margin="0,10,0,0" />
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+	</Grid>
+</controls:MvxStoreControl>
