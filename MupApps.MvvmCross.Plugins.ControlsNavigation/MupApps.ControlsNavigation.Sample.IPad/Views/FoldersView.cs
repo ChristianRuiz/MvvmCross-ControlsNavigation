@@ -27,8 +27,9 @@ namespace MupApps.ControlsNavigation.Sample.IPad
 		{
 			base.ViewDidLoad ();
 
-			FolderView.AddSubview (new FolderControl ().View);
-			
+		    var folderControl = new FolderControl();
+            folderControl.ViewDidAppearCalled += folderControl_ViewDidAppearCalled;
+
 			var source = new MvxSimpleTableViewSource(FoldersTable, FolderCellTemplate.Key, FolderCellTemplate.Key);
 			FoldersTable.Source = source;
 
@@ -39,6 +40,12 @@ namespace MupApps.ControlsNavigation.Sample.IPad
 
 			this.Title = "MailApp";
 		}
+
+        void folderControl_ViewDidAppearCalled(object sender, Cirrious.CrossCore.Core.MvxValueEventArgs<bool> e)
+        {
+            var folderControl = sender as FolderControl;
+            FolderView.AddSubview (folderControl.View);
+        }
 	}
 }
 
