@@ -119,6 +119,7 @@
     <AndroidResource Include="Resources\Values\SplashStyle.xml" />
     <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\Drawable\splash.png" />
+    <Content Include="ToDo-MvvmCross-ControlsNavigation\_ Droid UI.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\MupApps.MvvmCross.Plugins.ControlsNavigation.Droid\MupApps.MvvmCross.Plugins.ControlsNavigation.Droid.csproj">

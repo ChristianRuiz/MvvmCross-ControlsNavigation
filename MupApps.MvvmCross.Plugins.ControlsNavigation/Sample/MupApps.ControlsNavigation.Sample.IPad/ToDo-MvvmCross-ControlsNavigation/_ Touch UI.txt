@@ -1,0 +1,33 @@
+The steps to get this plugin on Touch UI working are:
+
+1. Override the CreatePresenter method on your Setup.cs file:
+
+		protected override IMvxTouchViewPresenter CreatePresenter()
+		{
+			var viewPresenter = base.CreatePresenter();
+			return new MvxTouchControlPresenter(viewPresenter);
+		}
+
+2. Add a new UIViewController to the Controls folder and Inherit from MvxAndroidControl, 
+	with the same name of the ViewModel but ending in Control (Ex: SecondViewModel -> SecondControl)
+
+3. Add a UIView to your nib View file from XCode and position it, or add it programmatically to your MvxViewController
+
+4. Add your control to that UIView.
+
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+
+			var yourControl = new YourControl();
+			AddChildViewController(yourControl);
+			YourUIView.AddSubview(yourControl.View);
+
+			...
+		}
+ 
+ 5. Call the ShowViewModel method from the container view's ViewModel and the control will do its job!
+
+ You can check a working sample here:
+ https://github.com/ChristianRuiz/MvvmCross-ControlsNavigation/tree/v1/MupApps.MvvmCross.Plugins.ControlsNavigation/Sample/MupApps.ControlsNavigation.Sample.IPad
+

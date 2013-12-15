@@ -146,7 +146,9 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ToDo-MvvmCross-ControlsNavigation\_ Touch UI.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <ItemGroup>

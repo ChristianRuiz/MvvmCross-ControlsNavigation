@@ -11,7 +11,10 @@ MvvmCross plugin that allows placing multiple ViewModels in the same View.
 ![Windows Store Controls Navigation](http://i.imgur.com/yeBFtXs.png)
 
 ##Adding to your project
-1. Override the CreateViewPresenter method on your Setup.cs file for each platform.
+
+1. Add it from NuGet: https://www.nuget.org/packages/MupApps.MvvmCross.Plugins.ControlsNavigation/1.0.1
+
+2. Override the CreateViewPresenter method on your Setup.cs file for each platform.
 	
 	Windows Store:
 	```
@@ -40,9 +43,9 @@ MvvmCross plugin that allows placing multiple ViewModels in the same View.
 	}
 	```
 
-2. Create a /Controls folder
-3. Inherit your controls from MvxStoreControl, MvxAndroidControl or MvxTouchControl with the same name of the ViewModel but ending in Control (Ex: SecondViewModel -> SecondControl)
-4. Add the user control to one of your Views that is already binded with a ViewModel (Ex: FirstView)
+3. Create a /Controls folder
+4. Inherit your controls from MvxStoreControl, MvxAndroidControl or MvxTouchControl with the same name of the ViewModel but ending in Control (Ex: SecondViewModel -> SecondControl)
+5. Add the user control to one of your Views that is already binded with a ViewModel (Ex: FirstView)
 
 	Windows Store (on your View xaml):
 	```
