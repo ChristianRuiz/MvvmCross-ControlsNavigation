@@ -27,7 +27,7 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Touch
 
         private readonly IMvxControlsContainer _container;
 
-        public MvxTouchControl(string nibName, NSBundle bundle) : base(nibName, bundle)
+        public MvxTouchControl()
         {
             if (!Mvx.CanResolve<IMvxControlsContainer>())
                 new Plugin().Load();
