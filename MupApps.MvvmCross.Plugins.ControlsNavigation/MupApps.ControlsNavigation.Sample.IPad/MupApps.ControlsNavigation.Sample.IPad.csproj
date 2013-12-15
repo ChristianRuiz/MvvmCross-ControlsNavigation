@@ -87,15 +87,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MupApps.MvvmCross.Plugins.ControlsNavigation.Touch\MupApps.MvvmCross.Plugins.ControlsNavigation.Touch.csproj">
-      <Project>{267fe534-2d9a-4aba-8a69-bd25bf629145}</Project>
+      <Project>{267FE534-2D9A-4ABA-8A69-BD25BF629145}</Project>
       <Name>MupApps.MvvmCross.Plugins.ControlsNavigation.Touch</Name>
     </ProjectReference>
     <ProjectReference Include="..\MupApps.MvvmCross.Plugins.ControlsNavigation\MupApps.MvvmCross.Plugins.ControlsNavigation.csproj">
-      <Project>{8ec1274e-99e6-4175-a113-8083ce23391c}</Project>
+      <Project>{8EC1274E-99E6-4175-A113-8083CE23391C}</Project>
       <Name>MupApps.MvvmCross.Plugins.ControlsNavigation</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sample\MupApps.ControlsNavigation.Sample.Core\MupApps.ControlsNavigation.Sample.Core.csproj">
-      <Project>{10befbf2-47e2-4545-b63f-83b88b6a00be}</Project>
+      <Project>{10BEFBF2-47E2-4545-B63F-83B88B6A00BE}</Project>
       <Name>MupApps.ControlsNavigation.Sample.Core</Name>
     </ProjectReference>
   </ItemGroup>

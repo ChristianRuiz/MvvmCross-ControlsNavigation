@@ -128,16 +128,44 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
+    <Compile Include="Views\FoldersView.cs" />
+    <Compile Include="Views\FoldersView.designer.cs">
+      <DependentUpon>FoldersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FolderView.cs" />
+    <Compile Include="Views\FolderView.designer.cs">
+      <DependentUpon>FolderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MailView.cs" />
+    <Compile Include="Views\MailView.designer.cs">
+      <DependentUpon>MailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CellTemplates\FolderCellTemplate.cs" />
+    <Compile Include="CellTemplates\FolderCellTemplate.designer.cs">
+      <DependentUpon>FolderCellTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CellTemplates\MailCellTemplate.cs" />
+    <Compile Include="CellTemplates\MailCellTemplate.designer.cs">
+      <DependentUpon>MailCellTemplate.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sample\MupApps.ControlsNavigation.Sample.Core\MupApps.ControlsNavigation.Sample.Core.csproj">
-      <Project>{10befbf2-47e2-4545-b63f-83b88b6a00be}</Project>
+      <Project>{10BEFBF2-47E2-4545-B63F-83B88B6A00BE}</Project>
       <Name>MupApps.ControlsNavigation.Sample.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
+    <Folder Include="CellTemplates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\FoldersView.xib" />
+    <InterfaceDefinition Include="Views\FolderView.xib" />
+    <InterfaceDefinition Include="Views\MailView.xib" />
+    <InterfaceDefinition Include="CellTemplates\FolderCellTemplate.xib" />
+    <InterfaceDefinition Include="CellTemplates\MailCellTemplate.xib" />
+  </ItemGroup>
 </Project>
