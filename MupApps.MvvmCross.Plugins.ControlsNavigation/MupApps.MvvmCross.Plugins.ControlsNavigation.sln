@@ -573,7 +573,7 @@ Global
 		{BCA1DB72-3227-43B4-A7B7-F511896B8C38} = {3FD8FC85-CB0B-471B-B065-F86E59B823BD}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = MupApps.ControlsNavigation.Sample.IPad\MupApps.ControlsNavigation.Sample.IPad.csproj
+		StartupItem = MupApps.ControlsNavigation.Sample.IPhone\MupApps.ControlsNavigation.Sample.IPhone.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

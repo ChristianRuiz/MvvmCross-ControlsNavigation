@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
@@ -31,6 +32,10 @@ namespace MupApps.ControlsNavigation.Sample.IPad
             AddChildViewController(folderControl);
             FolderView.AddSubview(folderControl.View);
 
+			var mailControl = new MailControl();
+			AddChildViewController(mailControl);
+			MailView.AddSubview(mailControl.View);
+
 			var source = new MvxSimpleTableViewSource(FoldersTable, FolderCellTemplate.Key, FolderCellTemplate.Key);
 			FoldersTable.Source = source;
 
@@ -40,6 +45,9 @@ namespace MupApps.ControlsNavigation.Sample.IPad
 			set.Apply ();
 
 			this.Title = "MailApp";
+
+			//As the folder is also showed on this view, we don't wait for the user to select one
+			((FoldersViewModel)ViewModel).SelectedFolder = ((FoldersViewModel)ViewModel).Folders.FirstOrDefault();
 		}
 	}
 }

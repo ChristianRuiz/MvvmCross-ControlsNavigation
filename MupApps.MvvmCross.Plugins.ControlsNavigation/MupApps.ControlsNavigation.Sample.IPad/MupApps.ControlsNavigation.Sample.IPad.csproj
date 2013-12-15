@@ -96,6 +96,14 @@
     <Compile Include="Controls\FolderControl.designer.cs">
       <DependentUpon>FolderControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MailControl.cs" />
+    <Compile Include="Controls\MailControl.designer.cs">
+      <DependentUpon>MailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CellTemplates\MailCellTemplate.cs" />
+    <Compile Include="CellTemplates\MailCellTemplate.designer.cs">
+      <DependentUpon>MailCellTemplate.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MupApps.MvvmCross.Plugins.ControlsNavigation.Touch\MupApps.MvvmCross.Plugins.ControlsNavigation.Touch.csproj">
@@ -150,5 +158,7 @@
     <InterfaceDefinition Include="CellTemplates\FolderCellTemplate.xib" />
     <InterfaceDefinition Include="Controls\FolderControl.xib" />
     <InterfaceDefinition Include="Resources\Controls\MailControl.xib" />
+    <InterfaceDefinition Include="Controls\MailControl.xib" />
+    <InterfaceDefinition Include="CellTemplates\MailCellTemplate.xib" />
   </ItemGroup>
 </Project>

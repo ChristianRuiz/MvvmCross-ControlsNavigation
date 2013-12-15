@@ -28,9 +28,19 @@ namespace MupApps.ControlsNavigation.Sample.IPad
 		{
 			base.ViewDidLoad ();
 
+			var source = new MvxSimpleTableViewSource(MailsTable, MailCellTemplate.Key, MailCellTemplate.Key);
+			MailsTable.Source = source;
+
 			var set = this.CreateBindingSet<FolderControl, FolderViewModel>();
-			set.Bind(FolderLabel).To (vm => vm.Folder.Name);
+			set.Bind(source).To (vm => vm.Mails);
+			set.Bind(source).For(s => s.SelectedItem).To (vm => vm.SelectedMail);
 			set.Apply ();
+		}
+
+		protected override void OnDataContextChanged ()
+		{
+			base.OnDataContextChanged ();
+			ResetControl (typeof(MailViewModel));
 		}
 	}
 }

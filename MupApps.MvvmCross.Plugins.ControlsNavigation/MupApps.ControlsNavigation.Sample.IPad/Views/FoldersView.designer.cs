@@ -17,6 +17,9 @@ namespace MupApps.ControlsNavigation.Sample.IPad
 
 		[Outlet]
 		MonoTouch.UIKit.UIView FolderView { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIView MailView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -28,6 +31,11 @@ namespace MupApps.ControlsNavigation.Sample.IPad
 			if (FolderView != null) {
 				FolderView.Dispose ();
 				FolderView = null;
+			}
+
+			if (MailView != null) {
+				MailView.Dispose ();
+				MailView = null;
 			}
 		}
 	}

@@ -13,13 +13,13 @@ namespace MupApps.ControlsNavigation.Sample.IPad
 	partial class FolderControl
 	{
 		[Outlet]
-		MonoTouch.UIKit.UILabel FolderLabel { get; set; }
+		MonoTouch.UIKit.UITableView MailsTable { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (FolderLabel != null) {
-				FolderLabel.Dispose ();
-				FolderLabel = null;
+			if (MailsTable != null) {
+				MailsTable.Dispose ();
+				MailsTable = null;
 			}
 		}
 	}
