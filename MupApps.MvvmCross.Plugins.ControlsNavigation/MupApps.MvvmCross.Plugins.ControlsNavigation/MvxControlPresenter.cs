@@ -11,7 +11,7 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation
 {
     public class MvxControlPresenter : IMvxViewPresenter
     {
-        private readonly IMvxViewPresenter _viewPresenter;
+        protected readonly IMvxViewPresenter _viewPresenter;
 
         public MvxControlPresenter(IMvxViewPresenter viewPresenter)
         {
