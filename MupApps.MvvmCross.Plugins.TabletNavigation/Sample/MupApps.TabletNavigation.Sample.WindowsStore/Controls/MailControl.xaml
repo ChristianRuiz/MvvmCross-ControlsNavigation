@@ -15,7 +15,7 @@
 		<SampleData:MailSampleDataSource x:Key="MailSampleDataSource" d:IsDataSource="True"/>
 	</controls:MvxStoreControl.Resources>
     
-	<Grid d:DataContext="{Binding Source={StaticResource MailSampleDataSource}}">
+	<Grid d:DataContext="{Binding Source={StaticResource MailSampleDataSource}}" Background="{StaticResource AppBackgroundBrush}" Margin="10,20">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="*" />
@@ -26,15 +26,15 @@
 				<ColumnDefinition Width="Auto" />
 			</Grid.ColumnDefinitions>
 			<StackPanel>
-				<TextBlock Text="{Binding Mail.From}" />
-				<TextBlock Text="{Binding Mail.To}" />
-				<TextBlock Text="{Binding Mail.Subject}" />
+				<TextBlock Text="{Binding Mail.From}" Style="{StaticResource SubtitleTextBlockStyle}" Foreground="{StaticResource AppForegroundBrush}" />
+				<TextBlock Text="{Binding Mail.To}" Foreground="#CC000000" Margin="0,5,0,0" />
+				<TextBlock Text="{Binding Mail.Subject}" FontWeight="Bold" Padding="0,5,0,0" />
 			</StackPanel>
-			<TextBlock Grid.Column="1" Text="{Binding Mail.Date}" />
+			<TextBlock Grid.Column="1" Text="{Binding Mail.Date}" Foreground="#CC000000" />
         </Grid>
 
 		<Grid Grid.Row="1">
-			<TextBlock TextWrapping="Wrap" Text="{Binding Mail.Body}" />
+			<TextBlock TextWrapping="Wrap" Text="{Binding Mail.Body}" Margin="0,10,0,0" />
 		</Grid>
 	</Grid>
 </controls:MvxStoreControl>

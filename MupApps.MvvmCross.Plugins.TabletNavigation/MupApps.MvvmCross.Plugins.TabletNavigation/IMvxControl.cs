@@ -1,4 +1,5 @@
-﻿using Cirrious.CrossCore.Core;
+﻿using System;
+using Cirrious.CrossCore.Core;
 using Cirrious.MvvmCross.ViewModels;
 
 namespace MupApps.MvvmCross.Plugins.TabletNavigation
@@ -7,5 +8,7 @@ namespace MupApps.MvvmCross.Plugins.TabletNavigation
         : IMvxDataConsumer
     {
         IMvxViewModel ViewModel { get; set; }
+
+        void ResetControl(Type viewModelType);
     }
 }

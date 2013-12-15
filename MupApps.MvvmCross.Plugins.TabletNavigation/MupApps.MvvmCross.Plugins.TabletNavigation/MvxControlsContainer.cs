@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.Views;
 
@@ -26,6 +27,14 @@ namespace MupApps.MvvmCross.Plugins.TabletNavigation
         public void ClearAll()
         {
             _controls.Clear();
+        }
+
+        public void Reset(Type viewModelType)
+        {
+            var controlFinder = Mvx.Resolve<IMvxControlFinder>();
+            var control = controlFinder.GetControl(viewModelType);
+            if (control != null)
+                control.ViewModel = null;
         }
 
         public IMvxControl GetControl(IMvxViewModel viewModelType)

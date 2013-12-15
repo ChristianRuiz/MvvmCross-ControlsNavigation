@@ -16,4 +16,7 @@
     <SampleData:MailsItem From="user-7@fabrikam.com" To="user-7@fabrikam.com" Date="August 10, 2003" Subject="Bibendum auctor" />
     <SampleData:MailsItem From="user-8@fabrikam.com" To="user-8@fabrikam.com" Date="September 20, 2007" Subject="Congue dictumst mus" />
   </SampleData:MailsSampleDataSource.Mails>
+  <SampleData:MailsSampleDataSource.Folder>
+    <SampleData:Folder Name="Aliquam" />
+  </SampleData:MailsSampleDataSource.Folder>
 </SampleData:MailsSampleDataSource>

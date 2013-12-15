@@ -13,6 +13,10 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
+using Cirrious.CrossCore;
+using Cirrious.MvvmCross.ViewModels;
+using Cirrious.MvvmCross.Views;
+using MupApps.MvvmCross.Plugins.TabletNavigation;
 using MupApps.MvvmCross.Plugins.TabletNavigation.WindowsStore;
 using MupApps.TabletNavigation.Sample.Core.ViewModels;
 
@@ -23,6 +27,12 @@ namespace MupApps.TabletNavigation.Sample.WindowsStore.Controls
         public FolderControl()
         {
             this.InitializeComponent();
+        }
+
+        void FolderControl_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
+        {
+            //If we change the folder, we reset the current mail ViewModel
+            ResetControl(typeof(MailViewModel));
         }
     }
 }

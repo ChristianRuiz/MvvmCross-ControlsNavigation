@@ -14,6 +14,17 @@ namespace MupApps.TabletNavigation.Sample.Core.ViewModels
             _mailBoxService = mailBoxService;
         }
 
+        private Folder _folder;
+        public Folder Folder
+        {
+            get { return _folder; }
+            set
+            {
+                _folder = value;
+                RaisePropertyChanged(() => Folder);
+            }
+        }
+
         private Mail _selectedMail;
         public Mail SelectedMail
         {
@@ -36,6 +47,7 @@ namespace MupApps.TabletNavigation.Sample.Core.ViewModels
 
         public async void Init(Folder folder)
         {
+            Folder = folder;
             Mails = await _mailBoxService.GetMailsAsync(folder.Name);
         }
     }

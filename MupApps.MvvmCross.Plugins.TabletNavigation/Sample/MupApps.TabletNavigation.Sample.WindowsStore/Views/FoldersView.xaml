@@ -7,24 +7,26 @@
     xmlns:controls="using:MupApps.TabletNavigation.Sample.WindowsStore.Controls"
     xmlns:SampleData="using:Blend.SampleData.FoldersSampleDataSource"
     x:Class="MupApps.TabletNavigation.Sample.WindowsStore.Views.FoldersView"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loaded="FoldersView_OnLoaded">
 
 	<views:MvxStorePage.Resources>
         <SampleData:FoldersSampleDataSource x:Key="FoldersSampleDataSource" d:IsDataSource="True"/>
     </views:MvxStorePage.Resources>
 
-	<Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" d:DataContext="{Binding Source={StaticResource FoldersSampleDataSource}}">
+	<Grid d:DataContext="{Binding Source={StaticResource FoldersSampleDataSource}}" Background="{StaticResource AppBackgroundBrush}">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*" />
-			<ColumnDefinition Width="*" />
 			<ColumnDefinition Width="2*" />
+			<ColumnDefinition Width="4*" />
 		</Grid.ColumnDefinitions>
         
-		<StackPanel>
-			<ListView ItemsSource="{Binding Folders}" SelectedItem="{Binding SelectedFolder, Mode=TwoWay}">
+		<StackPanel Background="{StaticResource AppForegroundBrush}">
+			<TextBlock Text="Mail App" Style="{StaticResource SubheaderTextBlockStyle}" Margin="10,10,0,0" />
+
+			<ListView ItemsSource="{Binding Folders}" SelectedItem="{Binding SelectedFolder, Mode=TwoWay}" Margin="0,20,0,0">
 				<ListView.ItemTemplate>
 					<DataTemplate>
-						<Grid>
+						<Grid Margin="20,0,0,0">
 							<TextBlock Text="{Binding Name}" />
 						</Grid>
 					</DataTemplate>

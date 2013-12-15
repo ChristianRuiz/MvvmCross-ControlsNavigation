@@ -9,6 +9,7 @@
   <xs:complexType name="MailsSampleDataSource">
     <xs:sequence>
       <xs:element name="Mails" type="tns:Mails" />
+      <xs:element name="Folder" type="tns:Folder" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Mails">
@@ -21,5 +22,8 @@
     <xs:attribute blend:Format="Email Address" name="To" type="xs:string" />
     <xs:attribute blend:Format="Date" name="Date" type="xs:string" />
     <xs:attribute name="Subject" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Folder">
+    <xs:attribute blend:FormatParameters="2,8" name="Name" type="xs:string" />
   </xs:complexType>
 </xs:schema>

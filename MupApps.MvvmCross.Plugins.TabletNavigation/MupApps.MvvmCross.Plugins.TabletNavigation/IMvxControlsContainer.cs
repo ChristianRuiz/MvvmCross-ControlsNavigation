@@ -10,5 +10,7 @@ namespace MupApps.MvvmCross.Plugins.TabletNavigation
         void Remove(IMvxControl control);
 
         void ClearAll();
+
+        void Reset(Type viewModelType);
     }
 }

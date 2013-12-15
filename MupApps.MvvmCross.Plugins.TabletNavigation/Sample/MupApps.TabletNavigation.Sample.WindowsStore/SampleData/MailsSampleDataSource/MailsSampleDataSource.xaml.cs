@@ -45,6 +45,29 @@ namespace Blend.SampleData.MailsSampleDataSource
 				return this._Mails;
 			}
 		}
+
+		private Folder _Folder = new Folder();
+
+		public Folder Folder
+		{
+			get
+			{
+				return this._Folder;
+			}
+
+			set
+			{
+				if (this._Folder != value)
+				{
+					this._Folder = value;
+					this.OnPropertyChanged("Folder");
+				}
+			}
+		}
+	}
+
+	public class Mails : System.Collections.ObjectModel.ObservableCollection<MailsItem>
+	{ 
 	}
 
 	public class MailsItem : INotifyPropertyChanged
@@ -136,8 +159,36 @@ namespace Blend.SampleData.MailsSampleDataSource
 		}
 	}
 
-	public class Mails : System.Collections.ObjectModel.ObservableCollection<MailsItem>
-	{ 
+	public class Folder : INotifyPropertyChanged
+	{
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		protected virtual void OnPropertyChanged(string propertyName)
+		{
+			if (this.PropertyChanged != null)
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+
+		private string _Name = string.Empty;
+
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+
+			set
+			{
+				if (this._Name != value)
+				{
+					this._Name = value;
+					this.OnPropertyChanged("Name");
+				}
+			}
+		}
 	}
 #endif
 }

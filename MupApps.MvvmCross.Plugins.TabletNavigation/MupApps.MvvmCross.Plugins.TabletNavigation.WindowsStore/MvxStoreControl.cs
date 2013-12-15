@@ -42,6 +42,7 @@ namespace MupApps.MvvmCross.Plugins.TabletNavigation.WindowsStore
                 new Plugin().Load();
 
             _container = Mvx.Resolve<IMvxControlsContainer>();
+
             Loaded += MvxStoreControl_Loaded;
             Unloaded += MvxStoreControl_Unloaded;
         }
@@ -54,6 +55,11 @@ namespace MupApps.MvvmCross.Plugins.TabletNavigation.WindowsStore
         void MvxStoreControl_Unloaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             _container.Remove(this);
+        }
+
+        public void ResetControl(Type viewModelType)
+        {
+            _container.Reset(viewModelType);
         }
     }
 }
