@@ -42,6 +42,7 @@
     <Compile Include="IMvxControl.cs" />
     <Compile Include="IMvxControlFinder.cs" />
     <Compile Include="IMvxControlsContainer.cs" />
+    <Compile Include="IMvxDataContextChanged.cs" />
     <Compile Include="MvxControlPresenter.cs" />
     <Compile Include="MvxControlsContainer.cs" />
     <Compile Include="Plugin.cs" />

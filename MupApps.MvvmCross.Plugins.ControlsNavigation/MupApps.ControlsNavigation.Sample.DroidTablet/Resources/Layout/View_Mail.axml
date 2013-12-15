@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/MupApps.ControlsNavigation.Sample.DroidTablet"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFEEEEEE">
+    <TextView
+        local:MvxBind="Text Mail.From"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="#CC000000"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        local:MvxBind="Text Mail.To"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="#CC000000"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        local:MvxBind="Text Mail.Subject"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        local:MvxBind="Text Mail.Body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_vertical" />
+</LinearLayout>

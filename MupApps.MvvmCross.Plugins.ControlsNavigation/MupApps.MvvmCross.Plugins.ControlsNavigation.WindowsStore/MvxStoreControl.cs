@@ -1,31 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.UI.Xaml.Controls;
 using Cirrious.CrossCore;
-using Cirrious.CrossCore.Core;
 using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Views;
 
 namespace MupApps.MvvmCross.Plugins.ControlsNavigation.WindowsStore
 {
     public class MvxStoreControl
         : UserControl, IMvxControl
     {
-        private IMvxViewModel _viewModel;
         public IMvxViewModel ViewModel
         {
-            get { return _viewModel; }
+            get { return DataContext as IMvxViewModel; }
             set
             {
-                if (_viewModel == value)
-                    return;
-
-                _viewModel = value;
-                DataContext = ViewModel;
+                DataContext = value;
             }
         }
 
@@ -40,7 +29,7 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.WindowsStore
 
             if (!Mvx.CanResolve<IMvxControlsContainer>())
                 new Plugin().Load();
-
+            
             _container = Mvx.Resolve<IMvxControlsContainer>();
 
             Loaded += MvxStoreControl_Loaded;

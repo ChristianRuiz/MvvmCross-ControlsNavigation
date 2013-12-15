@@ -15,6 +15,7 @@ namespace MupApps.ControlsNavigation.Sample.WindowsStore.Views
 
         private void FoldersView_OnLoaded(object sender, RoutedEventArgs e)
         {
+            //As the folder is also showed on this view, we don't wait for the user to select one
             ((FoldersViewModel)ViewModel).SelectedFolder = ((FoldersViewModel)ViewModel).Folders.FirstOrDefault();
         }
     }

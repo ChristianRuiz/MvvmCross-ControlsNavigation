@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/MupApps.ControlsNavigation.Sample.DroidTablet"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFEEEEEE">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="fill_parent">
+        <TextView
+            android:text="Mail App"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="32dp"
+            android:paddingBottom="5dp" />
+        <Mvx.MvxListView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            local:MvxBind="ItemsSource Folders;SelectedItem SelectedFolder"
+            local:MvxItemTemplate="@layout/itemtemplate_folder" />
+    </LinearLayout>
+    <MupApps.ControlsNavigation.Sample.DroidTablet.Controls.FolderControl
+        android:layout_height="fill_parent"
+        android:layout_width="0dp"
+        android:layout_weight="2" />
+    <MupApps.ControlsNavigation.Sample.DroidTablet.Controls.MailControl
+        android:layout_height="fill_parent"
+        android:layout_width="0dp"
+        android:layout_weight="4" />
+</LinearLayout>
