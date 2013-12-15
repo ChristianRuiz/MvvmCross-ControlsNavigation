@@ -12,7 +12,7 @@ MvvmCross plugin that allows placing multiple ViewModels in the same View.
 
 ##Adding to your project
 
-1. Add it from NuGet: https://www.nuget.org/packages/MupApps.MvvmCross.Plugins.ControlsNavigation/1.0.1
+1. Add it from NuGet: https://www.nuget.org/packages/MupApps.MvvmCross.Plugins.ControlsNavigation
 
 2. Override the CreateViewPresenter method on your Setup.cs file for each platform.
 	
