@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E05EB945-06ED-4EFD-815D-778CC2BC8B80}</ProjectGuid>
+    <ProjectGuid>{A17C1016-CE1B-4387-B5A6-E70D54E7A1B8}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MupApps.ControlsNavigation.Sample.Droid</RootNamespace>
-    <AssemblyName>MupApps.ControlsNavigation.Sample.Droid</AssemblyName>
+    <RootNamespace>MupApps.ControlsNavigation.Sample.DroidTablet</RootNamespace>
+    <AssemblyName>MupApps.ControlsNavigation.Sample.DroidTablet</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -77,30 +77,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\FolderControl.cs" />
+    <Compile Include="Controls\MailControl.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
-    <Compile Include="Views\MailView.cs" />
-    <Compile Include="Views\FolderView.cs" />
     <Compile Include="Views\FoldersView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\Layout\SplashScreen.axml" />
-    <AndroidResource Include="Resources\Layout\View_Folders.axml">
+    <AndroidResource Include="Resources\Layout\ItemTemplate_Folder.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ItemTemplate_Mail.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\View_Folder.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\Layout\ItemTemplate_Folder.axml">
-      <SubType>AndroidResource</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\ItemTemplate_Mail.axml">
+    <AndroidResource Include="Resources\Layout\View_Folders.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\View_Mail.axml">
@@ -120,11 +121,20 @@
     <AndroidResource Include="Resources\Drawable\splash.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sample\MupApps.ControlsNavigation.Sample.Core\MupApps.ControlsNavigation.Sample.Core.csproj">
+    <ProjectReference Include="..\..\MupApps.MvvmCross.Plugins.ControlsNavigation.Droid\MupApps.MvvmCross.Plugins.ControlsNavigation.Droid.csproj">
+      <Project>{4ABEBE4F-FA21-4A4F-BF41-CDE1DE342A7B}</Project>
+      <Name>MupApps.MvvmCross.Plugins.ControlsNavigation.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MupApps.MvvmCross.Plugins.ControlsNavigation\MupApps.MvvmCross.Plugins.ControlsNavigation.csproj">
+      <Project>{8EC1274E-99E6-4175-A113-8083CE23391C}</Project>
+      <Name>MupApps.MvvmCross.Plugins.ControlsNavigation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MupApps.ControlsNavigation.Sample.Core\MupApps.ControlsNavigation.Sample.Core.csproj">
       <Project>{10BEFBF2-47E2-4545-B63F-83B88B6A00BE}</Project>
       <Name>MupApps.ControlsNavigation.Sample.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

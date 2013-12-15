@@ -150,15 +150,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sample\MupApps.ControlsNavigation.Sample.Core\MupApps.ControlsNavigation.Sample.Core.csproj">
+    <ProjectReference Include="..\MupApps.ControlsNavigation.Sample.Core\MupApps.ControlsNavigation.Sample.Core.csproj">
       <Project>{10BEFBF2-47E2-4545-B63F-83B88B6A00BE}</Project>
       <Name>MupApps.ControlsNavigation.Sample.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-    <Folder Include="CellTemplates\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <ItemGroup>

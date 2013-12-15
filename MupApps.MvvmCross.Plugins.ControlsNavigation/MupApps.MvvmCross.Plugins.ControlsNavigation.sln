@@ -11,13 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.ControlsNavigation.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.ControlsNavigation.Sample.WindowsStore", "Sample\MupApps.ControlsNavigation.Sample.WindowsStore\MupApps.ControlsNavigation.Sample.WindowsStore.csproj", "{EEEC28F2-EC75-4134-9215-FF064C1E964A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.ControlsNavigation.Sample.Droid", "MupApps.ControlsNavigation.Sample.Droid\MupApps.ControlsNavigation.Sample.Droid.csproj", "{E05EB945-06ED-4EFD-815D-778CC2BC8B80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.ControlsNavigation.Sample.Droid", "Sample\MupApps.ControlsNavigation.Sample.Droid\MupApps.ControlsNavigation.Sample.Droid.csproj", "{E05EB945-06ED-4EFD-815D-778CC2BC8B80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.ControlsNavigation.Sample.DroidTablet", "MupApps.ControlsNavigation.Sample.DroidTablet\MupApps.ControlsNavigation.Sample.DroidTablet.csproj", "{A17C1016-CE1B-4387-B5A6-E70D54E7A1B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.ControlsNavigation.Sample.DroidTablet", "Sample\MupApps.ControlsNavigation.Sample.DroidTablet\MupApps.ControlsNavigation.Sample.DroidTablet.csproj", "{A17C1016-CE1B-4387-B5A6-E70D54E7A1B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.ControlsNavigation.Sample.IPhone", "MupApps.ControlsNavigation.Sample.IPhone\MupApps.ControlsNavigation.Sample.IPhone.csproj", "{DD995A4A-1310-4090-BE99-5C0EE9983212}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.ControlsNavigation.Sample.IPhone", "Sample\MupApps.ControlsNavigation.Sample.IPhone\MupApps.ControlsNavigation.Sample.IPhone.csproj", "{DD995A4A-1310-4090-BE99-5C0EE9983212}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.ControlsNavigation.Sample.IPad", "MupApps.ControlsNavigation.Sample.IPad\MupApps.ControlsNavigation.Sample.IPad.csproj", "{BCA1DB72-3227-43B4-A7B7-F511896B8C38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.ControlsNavigation.Sample.IPad", "Sample\MupApps.ControlsNavigation.Sample.IPad\MupApps.ControlsNavigation.Sample.IPad.csproj", "{BCA1DB72-3227-43B4-A7B7-F511896B8C38}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupApps.MvvmCross.Plugins.ControlsNavigation.WindowsStore", "MupApps.MvvmCross.Plugins.ControlsNavigation.WindowsStore\MupApps.MvvmCross.Plugins.ControlsNavigation.WindowsStore.csproj", "{9F99CA40-183C-42A9-B8CA-1D12420AA4B3}"
 EndProject
