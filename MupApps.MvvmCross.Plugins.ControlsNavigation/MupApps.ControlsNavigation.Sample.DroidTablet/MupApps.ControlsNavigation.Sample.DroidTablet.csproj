@@ -27,7 +27,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -38,7 +37,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
@@ -66,18 +64,15 @@
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.0.14\lib\MonoAndroid\System.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.0.14\lib\MonoAndroid\System.Windows.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="System.Net">
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.0.14\lib\MonoAndroid\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.0.14\lib\MonoAndroid\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
       <HintPath>..\packages\MvvmCross.PortableSupport.3.0.14\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -127,15 +122,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MupApps.MvvmCross.Plugins.ControlsNavigation.Droid\MupApps.MvvmCross.Plugins.ControlsNavigation.Droid.csproj">
-      <Project>{4abebe4f-fa21-4a4f-bf41-cde1de342a7b}</Project>
+      <Project>{4ABEBE4F-FA21-4A4F-BF41-CDE1DE342A7B}</Project>
       <Name>MupApps.MvvmCross.Plugins.ControlsNavigation.Droid</Name>
     </ProjectReference>
     <ProjectReference Include="..\MupApps.MvvmCross.Plugins.ControlsNavigation\MupApps.MvvmCross.Plugins.ControlsNavigation.csproj">
-      <Project>{8ec1274e-99e6-4175-a113-8083ce23391c}</Project>
+      <Project>{8EC1274E-99E6-4175-A113-8083CE23391C}</Project>
       <Name>MupApps.MvvmCross.Plugins.ControlsNavigation</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sample\MupApps.ControlsNavigation.Sample.Core\MupApps.ControlsNavigation.Sample.Core.csproj">
-      <Project>{10befbf2-47e2-4545-b63f-83b88b6a00be}</Project>
+      <Project>{10BEFBF2-47E2-4545-B63F-83B88B6A00BE}</Project>
       <Name>MupApps.ControlsNavigation.Sample.Core</Name>
     </ProjectReference>
   </ItemGroup>

@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{267FE534-2D9A-4ABA-8A69-BD25BF629145}</ProjectGuid>
@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MupApps.MvvmCross.Plugins.ControlsNavigation\MupApps.MvvmCross.Plugins.ControlsNavigation.csproj">
-      <Project>{8ec1274e-99e6-4175-a113-8083ce23391c}</Project>
+      <Project>{8EC1274E-99E6-4175-A113-8083CE23391C}</Project>
       <Name>MupApps.MvvmCross.Plugins.ControlsNavigation</Name>
     </ProjectReference>
   </ItemGroup>
