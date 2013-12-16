@@ -1,0 +1,43 @@
+The steps to get this plugin on Wpf UI working are:
+
+1. Replace the constructor and override the CreateViewDispatcher method on your Setup.cs file:
+
+		private readonly Dispatcher _uiThreadDispatcher;
+        private readonly IMvxWpfViewPresenter _presenter;
+
+		public Setup(Dispatcher dispatcher, IMvxWpfViewPresenter presenter)
+            : base(dispatcher, presenter)
+        {
+            _uiThreadDispatcher = dispatcher;
+            _presenter = presenter;
+        }
+	
+		protected override IMvxViewDispatcher CreateViewDispatcher()
+        {
+            var controlPresenter = new MvxWpfControlPresenter(_presenter);
+       
+            return new MvxWpfViewDispatcher(_uiThreadDispatcher, controlPresenter);
+        }
+
+2. Add a new UserControl to the Controls folder and Inherit from MvxWpfControl, 
+	with the same name of the ViewModel but ending in Control (Ex: SecondViewModel -> SecondControl)
+
+		<controls:MvxWpfControl xmlns:controls="clr-namespace:MupApps.MvvmCross.Plugins.ControlsNavigation.Wpf;assembly=MupApps.MvvmCross.Plugins.ControlsNavigation.Wpf"
+
+
+		public partial class YourControl : MvxWpfControl
+
+
+3. Add the user control to one of your Views that is already binded with a ViewModel (Ex: FirstView). 
+	On your view xaml:
+
+		xmlns:controls="clr-namespace:YourNamespace.Controls"
+
+		...
+
+		<controls:SecondControl />
+
+4. Call the ShowViewModel method from the container view's ViewModel and the control will do its job!
+
+ You can check a working sample here:
+ https://github.com/ChristianRuiz/MvvmCross-ControlsNavigation/tree/v1/MupApps.MvvmCross.Plugins.ControlsNavigation/Sample/MupApps.ControlsNavigation.Sample.Wpf

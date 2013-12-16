@@ -1,0 +1,35 @@
+﻿<controls:MvxWpfControl xmlns:controls="clr-namespace:MupApps.MvvmCross.Plugins.ControlsNavigation.Wpf;assembly=MupApps.MvvmCross.Plugins.ControlsNavigation.Wpf" 
+            x:Class="MupApps.ControlsNavigation.Sample.Wpf.Controls.MailControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="{StaticResource AppBackgroundBrush}" Margin="10,20">
+        <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Mail.From}" FontSize="24" Foreground="{StaticResource AppForegroundBrush}" />
+                        <TextBlock Text="{Binding Mail.To}" Foreground="#CC000000" Margin="0,5,0,0" />
+                        <TextBlock Text="{Binding Mail.Subject}" FontWeight="Bold" Padding="0,5,0,0" />
+                    </StackPanel>
+                    <TextBlock Grid.Column="1" Text="{Binding Mail.Date}" Foreground="#CC000000" />
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Mail.Body}" Margin="0,10,0,0" />
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</controls:MvxWpfControl>
