@@ -3,7 +3,7 @@
 MvvmCross plugin that allows placing multiple ViewModels in the same View as Controls, creating composite views.
 ##Features
 1. Create composite views with multiple ViewModels asociated to Controls.
-2. Use the same ViewModels for a mobile and tablet or desktop App, due it modifies the ShowViewModel behaviour allowing it to show Controls, but still allowing you to change Views.
+2. Use the same ViewModels for a mobile and tablet Apps. It modifies the ShowViewModel behaviour, allowing you to show Controls, not just change Views.
 3. Implemented for iPad, Windows Store, Android Tablet Apps and Wpf applications.
 
 ##Sample
@@ -92,7 +92,8 @@ The control will be hidden until ShowViewModel has been called. You could change
 
 	Touch:
 	
-	a. Add a UIView to your nib View file from XCode and position it, or add it programmatically to your MvxViewController
+	a. Add a UIView to your nib View file from XCode and position it, or add it programmatically 
+		to your MvxViewController
 	
 	b. Ensure that your UIViewController for your control inherits from MxvTouchControl
 	
