@@ -64,18 +64,15 @@
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvvmCross.PortableSupport.3.0.14\lib\MonoAndroid\System.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvvmCross.PortableSupport.3.0.14\lib\MonoAndroid\System.Windows.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="System.Net">
+      <HintPath>..\..\packages\MvvmCross.PortableSupport.3.0.14\lib\MonoAndroid\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>..\..\packages\MvvmCross.PortableSupport.3.0.14\lib\MonoAndroid\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
       <HintPath>..\..\packages\MvvmCross.PortableSupport.3.0.14\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
     </Reference>
   </ItemGroup>

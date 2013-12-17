@@ -44,7 +44,8 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Touch
         {
             base.ViewDidAppear(animated);
 
-            EmptyControlBehaviour = this.GetDefaultEmptyControlBehaviour();
+			if (!_emptyControlBehaviour.HasValue)
+            	EmptyControlBehaviour = this.GetDefaultEmptyControlBehaviour();
         }
 
         public override void ViewDidDisappear(bool animated)

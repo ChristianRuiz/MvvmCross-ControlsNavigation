@@ -7,6 +7,7 @@ using System.Linq;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using MupApps.ControlsNavigation.Sample.Core.ViewModels;
+using MupApps.MvvmCross.Plugins.ControlsNavigation;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace MupApps.ControlsNavigation.Sample.IPad
