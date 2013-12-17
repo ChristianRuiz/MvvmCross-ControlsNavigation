@@ -22,7 +22,7 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Droid
 
         public object DataContext
         {
-            get { return BindingContext.DataContext; }
+            get { return BindingContext != null ? BindingContext.DataContext : null; }
             set { BindingContext.DataContext = value; }
         }
 
@@ -34,6 +34,7 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Droid
                 DataContext = value;
                 OnDataContextChanged();
                 OnViewModelSet();
+                this.CheckEmptyControlBehaviour();
             }
         }
 
@@ -56,6 +57,8 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Droid
 
         private void Initialize()
         {
+            EmptyControlBehaviour = this.GetDefaultEmptyControlBehaviour();
+
             BindingContext = new MvxAndroidBindingContext(Context, this);
 
             if (!Mvx.CanResolve<IMvxControlsContainer>())
@@ -73,6 +76,33 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Droid
         public void ResetControl(Type viewModelType)
         {
             _container.Reset(viewModelType);
+        }
+
+        private EmptyControlBehaviours? _emptyControlBehaviour;
+        public EmptyControlBehaviours EmptyControlBehaviour
+        {
+            get
+            {
+                return _emptyControlBehaviour.HasValue
+                    ? _emptyControlBehaviour.Value
+                    : this.GetDefaultEmptyControlBehaviour();
+            }
+            set
+            {
+                var lastBehaviour = _emptyControlBehaviour;
+                _emptyControlBehaviour = value;
+                this.CheckEmptyControlBehaviour(lastBehaviour);
+            }
+        }
+        
+        public void ChangeVisibility(bool visible)
+        {
+            Visibility = visible ? ViewStates.Visible : ViewStates.Invisible;
+        }
+
+        public void ChangeEnabled(bool enabled)
+        {
+            Enabled = enabled;
         }
 
         public void SetContentView(int layoutResId)

@@ -15,5 +15,11 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation
         IMvxViewModel ViewModel { get; set; }
 
         void ResetControl(Type viewModelType);
+
+        EmptyControlBehaviours EmptyControlBehaviour { get; set; }
+
+        void ChangeVisibility(bool visible);
+
+        void ChangeEnabled(bool enabled);
     }
 }

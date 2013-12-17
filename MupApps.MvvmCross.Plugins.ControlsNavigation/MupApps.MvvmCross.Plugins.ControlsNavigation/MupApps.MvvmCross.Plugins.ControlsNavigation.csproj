@@ -41,10 +41,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmptyControlBehaviours.cs" />
     <Compile Include="IMvxControl.cs" />
     <Compile Include="IMvxControlFinder.cs" />
     <Compile Include="IMvxControlsContainer.cs" />
     <Compile Include="IMvxDataContextChanged.cs" />
+    <Compile Include="MvxControlExtensions.cs" />
     <Compile Include="MvxControlPresenter.cs" />
     <Compile Include="MvxControlsContainer.cs" />
     <Compile Include="Plugin.cs" />

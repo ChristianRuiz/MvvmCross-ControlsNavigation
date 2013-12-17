@@ -5,6 +5,7 @@
 
 using System;
 using Windows.ApplicationModel;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
@@ -20,6 +21,7 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.WindowsStore
             set
             {
                 DataContext = value;
+                this.CheckEmptyControlBehaviour();
             }
         }
 
@@ -28,6 +30,8 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.WindowsStore
         public MvxStoreControl()
         {
             DataContext = null;
+
+            EmptyControlBehaviour = this.GetDefaultEmptyControlBehaviour();
 
             if (DesignMode.DesignModeEnabled)
                 return;
@@ -54,6 +58,33 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.WindowsStore
         public void ResetControl(Type viewModelType)
         {
             _container.Reset(viewModelType);
+        }
+
+        private EmptyControlBehaviours? _emptyControlBehaviour;
+        public EmptyControlBehaviours EmptyControlBehaviour
+        {
+            get
+            {
+                return _emptyControlBehaviour.HasValue
+                    ? _emptyControlBehaviour.Value
+                    : this.GetDefaultEmptyControlBehaviour();
+            }
+            set
+            {
+                var lastBehaviour = _emptyControlBehaviour;
+                _emptyControlBehaviour = value;
+                this.CheckEmptyControlBehaviour(lastBehaviour);    
+            }
+        }
+
+        public void ChangeVisibility(bool visible)
+        {
+            Visibility = visible ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        public void ChangeEnabled(bool enabled)
+        {
+            IsEnabled = enabled;
         }
     }
 }

@@ -28,6 +28,8 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel>
+                        <TextBlock Text="Mail: " Style="{StaticResource SubheaderTextBlockStyle}" Foreground="{StaticResource AppForegroundBrush}" Margin="10,0,0,0" />
+                        
                         <TextBlock Text="{Binding Mail.From}" Style="{StaticResource SubtitleTextBlockStyle}" Foreground="{StaticResource AppForegroundBrush}" />
                         <TextBlock Text="{Binding Mail.To}" Foreground="#CC000000" Margin="0,5,0,0" />
                         <TextBlock Text="{Binding Mail.Subject}" FontWeight="Bold" Padding="0,5,0,0" />

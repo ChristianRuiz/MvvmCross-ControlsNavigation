@@ -5,6 +5,7 @@
 
 using System;
 using Cirrious.CrossCore;
+using Cirrious.CrossCore.Touch;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.ViewModels;
 using MonoTouch.Foundation;
@@ -21,6 +22,7 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Touch
                 base.ViewModel = value;
                 OnDataContextChanged();
                 OnViewModelSet();
+                this.CheckEmptyControlBehaviour();
             }
         }
 
@@ -28,6 +30,7 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Touch
 
 		public MvxTouchControl(string nibName, NSBundle bundle) : base(nibName, bundle)
         {
+            //Hack: iOS crashes if you create a MvxUIViewController without DataContext
 			DataContext = new object ();
 
             if (!Mvx.CanResolve<IMvxControlsContainer>())
@@ -37,14 +40,52 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Touch
             _container.Add(this);
         }
 
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+
+            EmptyControlBehaviour = this.GetDefaultEmptyControlBehaviour();
+        }
+
         public override void ViewDidDisappear(bool animated)
         {
+            base.ViewDidDisappear(animated);
+
             _container.Remove(this);
         }
 
         public void ResetControl(Type viewModelType)
         {
             _container.Reset(viewModelType);
+        }
+
+        private EmptyControlBehaviours? _emptyControlBehaviour;
+        public EmptyControlBehaviours EmptyControlBehaviour
+        {
+            get
+            {
+                return _emptyControlBehaviour.HasValue
+                    ? _emptyControlBehaviour.Value
+                    : this.GetDefaultEmptyControlBehaviour();
+            }
+            set
+            {
+                var lastBehaviour = _emptyControlBehaviour;
+                _emptyControlBehaviour = value;
+                this.CheckEmptyControlBehaviour(lastBehaviour);
+            }
+        }
+
+        public void ChangeVisibility(bool visible)
+        {
+            if (View != null)
+                View.Hidden = !visible;
+        }
+
+        public void ChangeEnabled(bool enabled)
+        {
+            if (View != null)
+                View.UserInteractionEnabled = enabled;
         }
 
         public event EventHandler DataContextChanged;
