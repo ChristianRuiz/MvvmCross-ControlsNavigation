@@ -72,6 +72,7 @@ MvvmCross plugin that allows placing multiple ViewModels in the same View as Con
 The control will be hidden until ShowViewModel has been called. You could change that behaviour setting the property EmptyControlBehaviour (None, Hidden, Disabled)
 
 	Windows Store (on your View xaml):
+	
 	```
 	xmlns:controls="using:YourNamespace.Controls"
 
@@ -81,6 +82,7 @@ The control will be hidden until ShowViewModel has been called. You could change
 	```
 
 	Droid (on your View axml):
+	
 	```
 	<YourNamespace.Controls.SecondControl
         android:layout_height="fill_parent"
@@ -110,6 +112,7 @@ The control will be hidden until ShowViewModel has been called. You could change
 	```
 
 	Wpf (on your View xaml):
+	
 	```
 	xmlns:controls="clr-namespace:YourNamespace.Controls"
 
