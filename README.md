@@ -1,8 +1,10 @@
 ##MvvmCross - Controls Navigation Plugin 
 
-MvvmCross plugin that allows placing multiple ViewModels in the same View. 
+MvvmCross plugin that allows placing multiple ViewModels in the same View as Controls, creating composite views.
 ##Features
-1. Allows iPad, Windows Store and Android Tablet Apps to have Controls instead of Views for each ViewModel.
+1. Create composite views with multiple ViewModels asociated to Controls.
+2. Use the same ViewModels for a mobile and tablet or desktop App, due it modifies the ShowViewModel behaviour allowing it to show Controls, but still allowing you to change Views.
+3. Implemented for iPad, Windows Store, Android Tablet Apps and Wpf applications.
 
 ##Sample
 
@@ -43,9 +45,31 @@ MvvmCross plugin that allows placing multiple ViewModels in the same View.
 	}
 	```
 
+	Wpf:
+	```
+	private readonly Dispatcher _uiThreadDispatcher;
+    private readonly IMvxWpfViewPresenter _presenter;
+
+	public Setup(Dispatcher dispatcher, IMvxWpfViewPresenter presenter)
+        : base(dispatcher, presenter)
+    {
+        _uiThreadDispatcher = dispatcher;
+        _presenter = presenter;
+    }
+	
+	protected override IMvxViewDispatcher CreateViewDispatcher()
+    {
+        var controlPresenter = new MvxWpfControlPresenter(_presenter);
+       
+        return new MvxWpfViewDispatcher(_uiThreadDispatcher, controlPresenter);
+    }
+	```
+
 3. Create a /Controls folder
 4. Inherit your controls from MvxStoreControl, MvxAndroidControl or MvxTouchControl with the same name of the ViewModel but ending in Control (Ex: SecondViewModel -> SecondControl)
 5. Add the user control to one of your Views that is already binded with a ViewModel (Ex: FirstView)
+
+The control will be hidden until ShowViewModel has been called. You could change that behaviour setting the property EmptyControlBehaviour (None, Hidden, Disabled)
 
 	Windows Store (on your View xaml):
 	```
@@ -83,4 +107,13 @@ MvvmCross plugin that allows placing multiple ViewModels in the same View.
 
 		...
 	}
+	```
+
+	Wpf (on your View xaml):
+	```
+	xmlns:controls="clr-namespace:YourNamespace.Controls"
+
+	...
+
+	<controls:SecondControl />
 	```

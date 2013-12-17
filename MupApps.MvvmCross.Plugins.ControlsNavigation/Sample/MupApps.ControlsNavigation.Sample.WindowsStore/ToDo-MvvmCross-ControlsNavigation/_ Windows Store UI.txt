@@ -26,6 +26,9 @@ The steps to get this plugin on Store UI working are:
 
 		<controls:SecondControl />
 
+	The control will be hidden until ShowViewModel has been called. 
+	You could change that behaviour setting the property EmptyControlBehaviour (None, Hidden, Disabled)
+
 4. Call the ShowViewModel method from the container view's ViewModel and the control will do its job!
 
  You can check a working sample here:
