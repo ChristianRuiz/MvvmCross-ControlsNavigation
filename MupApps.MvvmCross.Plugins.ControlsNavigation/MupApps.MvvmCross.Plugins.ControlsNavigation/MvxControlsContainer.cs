@@ -14,6 +14,10 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation
     public class MvxControlsContainer
     : IMvxControlsContainer
     {
+        //TODO: Check if there are some constants defined in the framework for these names
+        private const string VIEWMODEL_NAME_SUFFIX = "ViewModel";
+        private const string CONTROL_NAME_SUFFIX = "Control";
+        private const string VIEW_NAME_SUFFIX = "View";
         private readonly List<IMvxControl> _controls = new List<IMvxControl>();
 
         public void Add(IMvxControl control)
@@ -46,16 +50,23 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation
 
         public IMvxControl GetControl(Type viewModelType)
         {
-            //TODO: Check if there's some constant on the framework for "ViewModel"
             var viewModelName = viewModelType.Name;
-            if (!viewModelName.Contains("ViewModel"))
+            if (!viewModelName.EndsWith(VIEWMODEL_NAME_SUFFIX))
                 return null;
-            
-            var controlName = string.Format("{0}Control", 
-                viewModelName.Substring(0, viewModelName.LastIndexOf("ViewModel")));
-            var control = _controls.FirstOrDefault(c => c.GetType().Name == controlName);
 
+            var viewModelPrefix = viewModelName.Substring(0,
+                viewModelName.LastIndexOf(VIEWMODEL_NAME_SUFFIX, StringComparison.CurrentCulture));
+            var controlName = string.Format("{0}{1}", viewModelPrefix, CONTROL_NAME_SUFFIX);
+            var viewName = string.Format("{0}{1}", viewModelPrefix, VIEW_NAME_SUFFIX);
+            var control = _controls.FirstOrDefault(c =>
+			    {
+				var name = c.GetType().Name;
+				return
+				    string.Equals(name, controlName, StringComparison.CurrentCulture) ||
+				    string.Equals(name, viewName, StringComparison.CurrentCulture);
+			    });
             return control;
+ 
         }
     }
 }
