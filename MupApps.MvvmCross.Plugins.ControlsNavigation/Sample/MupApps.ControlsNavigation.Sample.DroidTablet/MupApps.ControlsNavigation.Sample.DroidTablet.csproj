@@ -85,7 +85,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
-    <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\SettingsView.cs" />
     <Compile Include="Views\FoldersView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -108,7 +108,7 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\SplashScreen.axml" />
-    <AndroidResource Include="Resources\Layout\FirstView.axml" />
+    <AndroidResource Include="Resources\Layout\View_Settings.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
@@ -121,6 +121,7 @@
     <AndroidResource Include="Resources\Values\SplashStyle.xml" />
     <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\Drawable\splash.png" />
+    <AndroidResource Include="Resources\Drawable\Settings.png" />
     <Content Include="ToDo-MvvmCross-ControlsNavigation\_ Droid UI.txt" />
   </ItemGroup>
   <ItemGroup>

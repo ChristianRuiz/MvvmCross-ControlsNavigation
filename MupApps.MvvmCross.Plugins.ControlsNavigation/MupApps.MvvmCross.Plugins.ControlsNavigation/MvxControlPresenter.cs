@@ -20,6 +20,13 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation
 
         public virtual void Show(MvxViewModelRequest request)
         {
+            if (ShowControl(request)) return;
+
+            _viewPresenter.Show(request);
+        }
+
+        protected bool ShowControl(MvxViewModelRequest request)
+        {
             IMvxControlFinder finder;
 
             if (Mvx.TryResolve(out finder))
@@ -30,21 +37,26 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation
                     var loaderService = Mvx.Resolve<IMvxViewModelLoader>();
                     var viewModel = loaderService.LoadViewModel(request, new MvxBundle());
                     control.ViewModel = viewModel;
-                    return;
+                    return true;
                 }
             }
-
-            _viewPresenter.Show(request);
+            return false;
         }
 
         public virtual void ChangePresentation(MvxPresentationHint hint)
         {
             if (hint is MvxClosePresentationHint)
             {
-                var finder = Mvx.Resolve<IMvxControlFinder>();
-                var control = finder.GetControl((hint as MvxClosePresentationHint).ViewModelToClose);
-                if (control != null)
-                    control.ViewModel = null;
+                IMvxControlFinder finder;
+
+                if (Mvx.TryResolve(out finder))
+                {
+                    var control = finder.GetControl((hint as MvxClosePresentationHint).ViewModelToClose);
+                    if (control != null)
+                        control.ViewModel = null;
+                    else
+                        _viewPresenter.ChangePresentation(hint);
+                }
                 else
                     _viewPresenter.ChangePresentation(hint);
             }

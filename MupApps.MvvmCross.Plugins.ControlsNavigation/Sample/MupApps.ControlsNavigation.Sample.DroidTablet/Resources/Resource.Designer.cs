@@ -66,7 +66,10 @@ namespace MupApps.ControlsNavigation.Sample.DroidTablet
 			public const int Icon = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int splash = 2130837505;
+			public const int Settings = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int splash = 2130837506;
 			
 			static Drawable()
 			{
@@ -84,6 +87,9 @@ namespace MupApps.ControlsNavigation.Sample.DroidTablet
 			// aapt resource value: 0x7f040000
 			public const int MvxBindingTagUnique = 2130968576;
 			
+			// aapt resource value: 0x7f040001
+			public const int buttonSettings = 2130968577;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -98,25 +104,25 @@ namespace MupApps.ControlsNavigation.Sample.DroidTablet
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int FirstView = 2130903040;
+			public const int ItemTemplate_Folder = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int ItemTemplate_Folder = 2130903041;
+			public const int ItemTemplate_Mail = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int ItemTemplate_Mail = 2130903042;
+			public const int SplashScreen = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int SplashScreen = 2130903043;
+			public const int View_Folder = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int View_Folder = 2130903044;
+			public const int View_Folders = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int View_Folders = 2130903045;
+			public const int View_Mail = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int View_Mail = 2130903046;
+			public const int View_Settings = 2130903046;
 			
 			static Layout()
 			{

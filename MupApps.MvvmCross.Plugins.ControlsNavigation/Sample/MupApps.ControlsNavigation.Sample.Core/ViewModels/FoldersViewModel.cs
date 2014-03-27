@@ -43,5 +43,13 @@ namespace MupApps.ControlsNavigation.Sample.Core.ViewModels
         {
             Folders = _mailBoxService.GetFolders();
         }
+
+        public IMvxCommand NavigateToSettingsCommand
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<SettingsViewModel>());
+            }
+        }
     }
 }
