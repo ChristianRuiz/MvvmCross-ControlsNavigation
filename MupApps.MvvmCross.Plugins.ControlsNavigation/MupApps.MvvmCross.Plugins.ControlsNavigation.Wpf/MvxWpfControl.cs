@@ -44,6 +44,8 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Wpf
 
             _container = Mvx.Resolve<IMvxControlsContainer>();
 
+            _container.Add(this);
+
             Loaded += OnLoaded;
             Unloaded += OnUnloaded;
         }

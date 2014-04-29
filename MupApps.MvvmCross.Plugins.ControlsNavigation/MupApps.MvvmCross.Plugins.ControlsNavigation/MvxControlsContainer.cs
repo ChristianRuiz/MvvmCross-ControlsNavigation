@@ -22,7 +22,8 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation
 
         public void Add(IMvxControl control)
         {
-            _controls.Add(control);
+            if (!_controls.Contains(control))
+                _controls.Add(control);
         }
 
         public void Remove(IMvxControl control)
