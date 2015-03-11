@@ -8,7 +8,7 @@ using Cirrious.CrossCore;
 using Cirrious.CrossCore.Touch;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.ViewModels;
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Touch
 {

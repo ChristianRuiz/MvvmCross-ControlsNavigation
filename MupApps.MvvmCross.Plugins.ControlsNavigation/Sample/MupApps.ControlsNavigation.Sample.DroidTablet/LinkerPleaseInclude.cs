@@ -1,10 +1,6 @@
-// LinkerPleaseInclude.cs
-// (c) Copyright Christian Ruiz @_christian_ruiz
-// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
-// 
-
 using System.Collections.Specialized;
 using System.Windows.Input;
+using Android.App;
 using Android.Views;
 using Android.Widget;
 
@@ -23,6 +19,11 @@ namespace MupApps.ControlsNavigation.Sample.DroidTablet
         {
             checkBox.CheckedChange += (sender, args) => checkBox.Checked = !checkBox.Checked;
         }
+        
+        public void Include(Switch @switch)
+        {
+            @switch.CheckedChange += (sender, args) => @switch.Checked = !@switch.Checked;
+        }
 
         public void Include(View view)
         {
@@ -33,6 +34,12 @@ namespace MupApps.ControlsNavigation.Sample.DroidTablet
         {
             text.TextChanged += (sender, args) => text.Text = "" + text.Text;
 			text.Hint = "" + text.Hint;
+        }
+        
+        public void Include(CheckedTextView text)
+        {
+            text.TextChanged += (sender, args) => text.Text = "" + text.Text;
+            text.Hint = "" + text.Hint;
         }
 
         public void Include(CompoundButton cb)
@@ -45,6 +52,11 @@ namespace MupApps.ControlsNavigation.Sample.DroidTablet
             sb.ProgressChanged += (sender, args) => sb.Progress = sb.Progress + 1;
         }
 
+        public void Include(Activity act)
+        {
+            act.Title = act.Title + "";
+        }
+
         public void Include(INotifyCollectionChanged changed)
         {
             changed.CollectionChanged += (s,e) => { var test = string.Format("{0}{1}{2}{3}{4}", e.Action,e.NewItems, e.NewStartingIndex, e.OldItems, e.OldStartingIndex); } ;
@@ -54,5 +66,17 @@ namespace MupApps.ControlsNavigation.Sample.DroidTablet
         {
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
+		
+		public void Include(Cirrious.CrossCore.IoC.MvxPropertyInjector injector)
+		{
+			injector = new Cirrious.CrossCore.IoC.MvxPropertyInjector ();
+		} 
+
+		public void Include(System.ComponentModel.INotifyPropertyChanged changed)
+		{
+			changed.PropertyChanged += (sender, e) =>  {
+				var test = e.PropertyName;
+			};
+		}
     }
 }

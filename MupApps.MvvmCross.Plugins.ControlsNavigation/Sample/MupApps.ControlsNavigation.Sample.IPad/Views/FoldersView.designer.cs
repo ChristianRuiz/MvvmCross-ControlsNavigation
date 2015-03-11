@@ -3,7 +3,7 @@
 // MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
 // 
 
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace MupApps.ControlsNavigation.Sample.IPad
 {
@@ -11,13 +11,13 @@ namespace MupApps.ControlsNavigation.Sample.IPad
 	partial class FoldersView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UITableView FoldersTable { get; set; }
+		UIKit.UITableView FoldersTable { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIView FolderView { get; set; }
+		UIKit.UIView FolderView { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIView MailView { get; set; }
+		UIKit.UIView MailView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
