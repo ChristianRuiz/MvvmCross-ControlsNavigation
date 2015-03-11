@@ -4,8 +4,8 @@
 // 
 
 using System;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using MupApps.ControlsNavigation.Sample.Core.Model;

@@ -1,13 +1,8 @@
-// Setup.cs
-// (c) Copyright Christian Ruiz @_christian_ruiz
-// MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
-// 
-
-using Cirrious.MvvmCross.Touch.Views.Presenters;
-using MonoTouch.UIKit;
 using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.Touch.Platform;
+using UIKit;
+using Cirrious.MvvmCross.Touch.Views.Presenters;
 using MupApps.MvvmCross.Plugins.ControlsNavigation.Touch;
 
 namespace MupApps.ControlsNavigation.Sample.IPad
@@ -19,7 +14,7 @@ namespace MupApps.ControlsNavigation.Sample.IPad
 		{
 		}
 
-		protected override IMvxApplication CreateApp ()
+		protected override IMvxApplication CreateApp()
 		{
 			return new Core.App();
 		}
@@ -29,7 +24,7 @@ namespace MupApps.ControlsNavigation.Sample.IPad
             return new DebugTrace();
         }
 
-	    protected override IMvxTouchViewPresenter CreatePresenter()
+        protected override IMvxTouchViewPresenter CreatePresenter()
 	    {
             var viewPresenter = base.CreatePresenter();
             return new MvxTouchControlPresenter(viewPresenter);
