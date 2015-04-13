@@ -47,6 +47,7 @@
     <Compile Include="MvxControlPresenter.cs" />
     <Compile Include="MvxControlsContainer.cs" />
     <Compile Include="Plugin.cs" />
+    <Compile Include="PluginLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
