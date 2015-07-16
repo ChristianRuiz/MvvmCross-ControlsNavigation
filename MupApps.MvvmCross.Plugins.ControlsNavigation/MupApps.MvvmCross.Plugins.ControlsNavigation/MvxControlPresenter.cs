@@ -29,18 +29,23 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation
         {
             IMvxControlFinder finder;
 
-            if (Mvx.TryResolve(out finder))
+            if (!Mvx.TryResolve(out finder))
             {
-                var control = finder.GetControl(request.ViewModelType);
-                if (control != null)
-                {
-                    var loaderService = Mvx.Resolve<IMvxViewModelLoader>();
-                    var viewModel = loaderService.LoadViewModel(request, new MvxBundle());
-                    control.ViewModel = viewModel;
-                    return true;
-                }
+                return false;
             }
-            return false;
+            var control = finder.GetControl(request.ViewModelType);
+            if (control == null)
+            {
+                return false;
+            }
+            if (control.ViewModel != null)
+            {
+                return true;
+            }
+            var loaderService = Mvx.Resolve<IMvxViewModelLoader>();
+            var viewModel = loaderService.LoadViewModel(request, new MvxBundle());
+            control.ViewModel = viewModel;
+            return true;
         }
 
         public virtual void ChangePresentation(MvxPresentationHint hint)
