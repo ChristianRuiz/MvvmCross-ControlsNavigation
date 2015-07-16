@@ -4,12 +4,12 @@
 // 
 
 using Cirrious.MvvmCross.Views;
-using Cirrious.MvvmCross.WindowsStore.Views;
+using Cirrious.MvvmCross.WindowsCommon.Views;
 
 namespace MupApps.MvvmCross.Plugins.ControlsNavigation.WindowsStore
 {
     public class MvxStoreControlPresenter 
-        : MvxControlPresenter, IMvxStoreViewPresenter
+        : MvxControlPresenter, IMvxWindowsViewPresenter
     {
         public MvxStoreControlPresenter(IMvxViewPresenter viewPresenter) : base(viewPresenter)
         {
