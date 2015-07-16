@@ -3,12 +3,13 @@
 // MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
 // 
 
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
+using Cirrious.MvvmCross.Binding.Touch.Views;
+using Cirrious.MvvmCross.Touch.Views;
 using MupApps.ControlsNavigation.Sample.Core.ViewModels;
+using MupApps.ControlsNavigation.Sample.IPhone.CellTemplates;
 
-namespace MupApps.ControlsNavigation.Sample.IPhone
+namespace MupApps.ControlsNavigation.Sample.IPhone.Views
 {
 	public partial class FoldersView : MvxViewController
 	{

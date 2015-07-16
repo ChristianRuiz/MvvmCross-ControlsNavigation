@@ -3,7 +3,7 @@
 // MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
 // 
 
-using MonoTouch.UIKit;
+using UIKit;
 
 namespace MupApps.ControlsNavigation.Sample.IPhone
 {
