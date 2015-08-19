@@ -3,10 +3,10 @@
 // MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
 // 
 
-using System;
 using System.Collections.Specialized;
 using System.Windows.Input;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 
 namespace MupApps.ControlsNavigation.Sample.IPhone
 {
@@ -51,7 +51,7 @@ namespace MupApps.ControlsNavigation.Sample.IPhone
         public void Include(UIDatePicker date)
         {
             date.Date = date.Date.AddSeconds(1);
-            date.ValueChanged += (sender, args) => { date.Date = DateTime.MaxValue; };
+            date.ValueChanged += (sender, args) => { date.Date = NSDate.DistantFuture; };
         }
 
         public void Include(UISlider slider)

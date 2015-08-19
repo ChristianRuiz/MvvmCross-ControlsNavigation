@@ -4,10 +4,10 @@
 // 
 
 using Cirrious.MvvmCross.Binding.BindingContext;
-using MupApps.ControlsNavigation.Sample.Core.ViewModels;
 using Cirrious.MvvmCross.Touch.Views;
+using MupApps.ControlsNavigation.Sample.Core.ViewModels;
 
-namespace MupApps.ControlsNavigation.Sample.IPhone
+namespace MupApps.ControlsNavigation.Sample.IPhone.Views
 {
 	public partial class MailView : MvxViewController
 	{

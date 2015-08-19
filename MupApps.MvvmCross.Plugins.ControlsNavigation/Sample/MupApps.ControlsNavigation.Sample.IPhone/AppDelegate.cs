@@ -6,15 +6,15 @@
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.ViewModels;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 
 namespace MupApps.ControlsNavigation.Sample.IPhone
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
 	// User Interface of the application, as well as listening (and optionally responding) to
 	// application events from iOS.
-	[Register ("AppDelegate")]
+	[Register("AppDelegate")]
     public partial class AppDelegate : MvxApplicationDelegate
 	{
 		// class-level declarations

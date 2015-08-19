@@ -4,13 +4,13 @@
 // 
 
 using System;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Touch.Views;
+using Foundation;
 using MupApps.ControlsNavigation.Sample.Core.Model;
+using UIKit;
 
-namespace MupApps.ControlsNavigation.Sample.IPhone
+namespace MupApps.ControlsNavigation.Sample.IPhone.CellTemplates
 {
 	public partial class FolderCellTemplate : MvxTableViewCell
 	{

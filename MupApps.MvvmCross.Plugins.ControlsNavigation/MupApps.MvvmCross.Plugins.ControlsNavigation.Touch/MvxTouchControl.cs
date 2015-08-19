@@ -48,13 +48,6 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Touch
             	EmptyControlBehaviour = this.GetDefaultEmptyControlBehaviour();
         }
 
-        public override void ViewDidDisappear(bool animated)
-        {
-            base.ViewDidDisappear(animated);
-
-            _container.Remove(this);
-        }
-
         public void ResetControl(Type viewModelType)
         {
             _container.Reset(viewModelType);
