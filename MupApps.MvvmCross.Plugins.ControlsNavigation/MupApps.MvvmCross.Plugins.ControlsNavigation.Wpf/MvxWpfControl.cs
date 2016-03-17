@@ -6,9 +6,9 @@
 using System;
 using System.ComponentModel;
 using System.Windows;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Wpf.Views;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Wpf.Views;
+using MvvmCross.Platform;
 
 namespace MupApps.MvvmCross.Plugins.ControlsNavigation.Wpf
 {

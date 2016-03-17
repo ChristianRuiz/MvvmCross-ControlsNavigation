@@ -3,9 +3,10 @@
 // MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
 // 
 
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Views;
+using System;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Core.Views;
+using MvvmCross.Platform;
 
 namespace MupApps.MvvmCross.Plugins.ControlsNavigation
 {
@@ -67,6 +68,11 @@ namespace MupApps.MvvmCross.Plugins.ControlsNavigation
             }
             else
                 _viewPresenter.ChangePresentation(hint);
+        }
+
+        public void AddPresentationHintHandler<THint>(Func<THint, bool> action) where THint : MvxPresentationHint
+        {
+            _viewPresenter.AddPresentationHintHandler<THint>(action);
         }
     }
 }
