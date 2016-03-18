@@ -3,8 +3,8 @@
 // MvvmCross - Controls Navigation Plugin is licensed using Microsoft Public License (Ms-PL)
 // 
 
+using MvvmCross.Core.ViewModels;
 using System;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace MupApps.MvvmCross.Plugins.ControlsNavigation
 {
